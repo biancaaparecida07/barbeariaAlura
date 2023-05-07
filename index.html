@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!-- TAG estrutural de informação para indicar ao navegador a versão do html que está sendo usado. Quando coloca-se apenas html já significa que é a versão 5-->
+<html lang="pt-br"> <!-- Permite a leitura em português da página e até mesmo ofertanto a opção de tradução-->
+	<head> <!--Aqui são infos que queremos passar pro navegador-->
+		<meta charset="UTF-8"><!-- Passando a informação com a tag meta e usa a propriedade charset que é o conjunto de caractere. Nesse momento estamos escolhendo o "dicionário" que queremos seguir, onde temos todos os acentos, etc. Permitindo o uso, por exemplo, de cedilha, crase, ... -->
+		<meta name="viewport" content="width=device-width"> <!--NESSE META ESTAMOS VENDO AS PROPRIEDADES DO DISPOSITIVO EM QUE O SITE ESTA SENDO VISUALIZADO. PARA MELHOR USO EM CELULARES POR EXEMPLO-->
+		<title>Barbearia Alura</title> <!--Título da página que aparece na aba do navegador-->	
+		<link rel="stylesheet" type="text/css" href="reset.css"> <!-- Primeiro limpa o estilo que o navegador impôe -->
+		<link rel="stylesheet" type="text/css" href="style.css"> <!-- Agora colocamos o nosso estilo -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> <!-- FONTE DO GOOGLE -->
+	
+	</head>
+<!-- ID PARA ITENS ÚNICOS, CLASSES PARA ITENS QUE VÃO SE REPETIR -->
+	<body><!--Aqui infos que serão exibidos na página-->
+		<!-- Para referenciar o ID no CSS usa-se o #-->
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+				<nav> <!-- Essa tag ajuda na distribuição do menu de navegação. -->
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<img class="banner" src="banner.jpg">
+
+		<main>
+			<section class="principal"> <!-- SECTION: indica conteúdo complexo... DIV é para uma divi~são normal-->
+				<h2 class = "titulo-principal">Sobre a Barbearia Alura</h2>
+				<img src="utensilios.jpg" class="utensilios" alt="Utensílios de um barbeiro">
+
+				<p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+
+				<p id="missao"><em>Nossa missão é:<strong> "Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
+
+				<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+			</section>
+			<section class="mapa">
+				<h3 class="titulo-principal">Nosso estabelecimento</h3>
+				<p>Nosso estabelecimento está localizado no coração da cidade.</p>
+				<div class="mapa-conteudo">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95607.17477679 887!2d-46.64570349187953!3d-23.563616633301027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xab35da2f5ca62674!2sCaelum%20-%20Escola%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1619292471325!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+				
+			</section>
+			<section class="beneficios">
+				<h3 class = "titulo-principal">Benefícios</h3> <!-- Aqui será um novo título, um pouco menor que o h1... uma outra seção da página. Utilizamos a tag ul para listas que não precisam ser ordenadas e ol para listas ordenadas. A tag li é usada para marcar os itens -->
+				<div class="conteudo-beneficios">
+					<ul class="lista-beneficios"> <!-- CRIAMOS A CLASSE ITENS para conseguir referenciar isso no CSS. Para referenciar a CLASSE no CSS usamos um ponto-->
+						<li class="itens"> Atendimento aos Clientes</li>
+						<li class="itens"> Espaço diferenciado</li>
+						<li class="itens"> Localização</li>
+						<li class="itens"> Profissionais Qualificados</li>
+						<li class="itens"> Pontualidade</li>
+						<li class="itens"> Limpeza</li>
+					</ul><img src="beneficios.jpg" class="imagem-beneficios"> <!--ESSA IMAGEM TEM QUE FICAR AQUI, A TAG IMG DEVE ESTAR GRUDADA NA TAG FECHADA UL PARA NAO ATRAPALHAR O INLINE BLOCK QUE FIZEMOS AQUI NA LISTA BENEFICIOS. sÓ ASSIM A IMAGEM VAI FICAR AO LADO DA LISTA -->
+				</div>
+				<div class="video">
+					<iframe width="100%" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+			</section>
+		</main>
+		<footer><!--TAG DO RODAPÉ-->
+			<img src="logo-branco.png">
+			<p class="copyright">&copy; Copyright Barbearia Alura - 2021</p>
+		</footer>
+	</body>	
+</html>
+
+<!-- A tag <style> do header indica a formatação que o conteúdo do corpo deve seguir. Por exemplo, a formatação para paragrafos. Todos seguirão a formatação do style. Outra forma de vermos as formatações CSS é como um arquivo externo. E esse arquivo externo é referenciado no link. 

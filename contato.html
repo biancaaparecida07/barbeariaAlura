@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Contato - Barbearia Alura</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"> <!-- Primeiro limpa o estilo que o navegador impôe -->
+		<link rel="stylesheet" type="text/css" href="style.css"> <!-- Agora colocamos o nosso estilo -->
+
+	</head>
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+				<nav> <!-- Essa tag ajuda na distribuição do menu de navegação. -->
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="produtos.html">Produtos</a></li>
+						<li><a href="contato">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<form>
+				<label for="nomesobrenome">Nome e Sobrenome: </label> <!--Label e Form andam juntos. o LABEL é a etiqueta do formulário... o titulo do que queremos que o usuário entre no formulário-->
+				<input type="text" id="nomesobrenome" class="input-padrao" required>
+				<!--Para associar o label com o input, colocamos um ID no inout e um FOR no label-->
+				<!--Required é usado para obrigar o preenchimento do campo-->
+
+				<label for="email">Email: </label>
+				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+				<label for="telefone">Telefone: </label>
+				<input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+				<label for="mensagem">Mensagem:</label>
+				<textarea rows="10" cols="70" id="mensagem" class="input-padrao" required></textarea><!-- Essa tag é para conteúdos maiores, mais complexos, que não ocupem apenas uma linha. Por isso diferente do input. E é possível colocar quantas linhas e quantas colunas de texto qu eessa caixa vai ter. -->
+				<fieldset>
+					<legend>Como prefere o nosso contato?</legend>
+
+					<label for="radio-email"><input type="radio" value="email" id="radio-email" name="contato">Email</label>
+					
+					<label for="radio-telefone"><input type="radio" value="telefone" id="radio-telefone" name="contato">Telefone</label>
+					
+					<label for="radio-whatsapp"><input type="radio" value="whatsapp" id="radio-whatsapp" name="contato" checked>WhatsApp</label>
+					<!-- Propriedade CHECKED usada no wpp para ser um radio já marcado inicialmente-->
+					
+				</fieldset>
+				<!-- Para que apenas um dos radios esteja marcado, é preciso colocar a propriedade de name no input. Isso simboliza que eles estão dentro de um mesmo grupo.  -->
+
+				<fieldset>
+					<legend>Qual horário prefere ser atendido?</legend>
+					<select>
+						<option>Manhã</option>
+						<option>Tarde</option>
+						<option>Noite</option>>
+					</select>
+				</fieldset>
+
+				<label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label>
+
+				<input type="submit" value="Enviar formulário" class="enviar">
+			</form>
+			<table><!--TABELA-->
+				<thead><!--CABEÇALHO-->
+					<tr><!--LINHA-->
+						<th>Dia</th><!--CÉLULA/COLUNA ESPECÍFICA DO CABEÇALHO
+
+						PARA MESCLAR: DENTRO DA TH OU TD COLOCA: colspan="x" onde x é o npumero de colunas pra mesclar-->
+						<td>Horário</td>
+					</tr>
+				<tbody><!--CORPO DA TABELA-->
+					<tr>
+						<td>Segunda</td><!--CÉLULA/COLUNA-->
+						<td>8h ~ 20h</td>
+					</tr>
+					<tr>
+						<td>Quarta</td>
+						<td>8h ~ 20h</td>
+					</tr>
+					<tr>
+						<td>Sexta</td>
+						<td>8h ~ 20h</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<footer><!--TAG DO RODAPÉ-->
+			<img src="logo-branco.png" alt="Logo da Barbearia Alura">
+			<p class="copyright">&copy; Copyright Barbearia Alura - 2021</p>
+		</footer>
+	</body>
+</html>
+
+<!-- Todo elemento tem um tipo de display. 
+	Display INLINE: ocupam apenas o tamanho do conteúdo. 
+	todos os campos de um formulário são inline. Imediatamente após um label já vem um input. E por aí vai. 
+	Display BLOCK: por ex, <p> ocupam 100% da largura da página. 
+
+		Para que cada label com seu input fique em uma linha separado, ou seja, um embaixo do outro, precisamos fazer no css que form label{ display block} Quando fazemos isso, não só a etiqueta quebra a linha, mas também seus inputs. 
+-->

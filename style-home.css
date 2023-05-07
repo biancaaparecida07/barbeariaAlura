@@ -1,0 +1,70 @@
+body {
+}
+
+#banner{
+	width: 100%;
+}
+
+.principal{
+	background: #cccccc;
+	padding: 30px;
+}
+
+.tituloPrincipal{
+	padding-left: 20px;
+}
+
+.tituloCentralizado{
+	text-align: center; 
+}
+
+p{
+	text-align: center; 
+}
+
+#missao{
+	font-size: 20px
+}
+
+em strong{
+	color: red
+}
+	
+.itens{
+	font-style: italic;
+}
+
+.beneficios{
+	background: #ffffff;
+	padding: 20px; /** aqui alteramos o espaçamento interno**/
+}
+
+ul{
+	display: inline-block; /** essa propriedade faz a lista ocupar apenas 
+							o tamanho do conteúdo no display. Colocando isso, a imagem n vai aparecer embaixo e sim ao lado da lista. Pois ela já não ocupa mais toda a extensao da linha no display**/
+	vertical-align: top; /** Aqui faz os elementos da lista se alinharem pela linha de cima, pela primeira linha da lista. Ou seja, vai vir logo após a última linha de conteúdo antes da lista**/
+	width: 20%;
+	margin-right: 15%;
+}
+
+.imagembeneficios{
+	width: 50%
+}
+
+footer{
+	text-align: center;
+	background: url(bg.jpg); /**utilizamos a imagem de fundo para conseguirmos ver a logo do rodapé**/
+	padding: 40px 0; /** 40px p cima e baixo e 0 para os lados. Essa borda externa foi adicionada para a imagem desgrudar do inicio da imagem preta do rodapé e centralizar um pouco**/
+}
+
+.copyright{
+	color: #ffffff;
+	font-size: 13px;
+	margin-top: 20px;
+}
+
+/* css da página inicial*/
+.banner{
+width: 100%;
+
+}
